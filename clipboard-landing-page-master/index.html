@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <title> Clipboard landing page</title>
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      font-size: 18px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+
+    }
+
+   
+
+    .main-heading{
+      font-size: 32px;
+      font-weight: 800;
+    }
+
+    .heading{
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .sub-heading{
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .para{
+      font-size: 14px;
+      padding: 10px 0px;
+    }
+
+    .big-para{
+      padding: 10px 380px;
+    }
+
+
+
+    .container{
+      width: 100%;
+    }
+
+    .content{
+      width: 100%;
+      padding: 50px;
+    }
+
+    .top{
+       margin-bottom: 50px;
+       text-align: center;
+    }
+
+    .top .logo{
+      width: 50px;
+    }
+
+    button{
+      padding: 10px;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+
+    }
+
+    .btn .btn-1{
+      background-color: hsl(171, 66%, 44%);
+    }
+
+    .btn .btn-1:hover{
+      background-color: hsl(210, 10%, 33%);
+    }
+
+    .btn .btn-2{
+      background-color: hsl(233, 100%, 69%);
+    }
+
+    .btn .btn-2:hover{
+      background-color: hsl(201, 11%, 66%);
+    }
+
+    .text{
+      text-align: center;
+      margin-bottom: 50px;
+    
+    }
+
+    .tv{
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .tv img{
+      width: 30%;
+    }
+
+    .tv-info{
+       width: 30%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+    }
+
+    .mobile{
+      text-align: center;
+    }
+
+    .mobile img{
+      width: 50%;
+    }
+
+    .feature{
+      margin-bottom: 50px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      
+    }
+
+    .feature .item{
+      width: 33%;
+       text-align: center;
+    }
+
+    .feature .item img{
+      width: 40px;
+      margin-bottom: 20px;
+    }
+
+    .sm-para{
+      /* border: 1px solid black; */
+      padding: 10px 50px;
+    }
+
+    .company-logo{
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .bottom{
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    @media(max-width:430px){
+
+      .main-heading{
+        padding: 10px;
+        color: rgba(0, 0, 0, 0.692);
+      }
+      .heading{
+      font-size: 24px;
+      padding: 15px;
+      color: rgba(0, 0, 0, 0.692);
+    }
+
+    .sub-heading{
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: rgba(0, 0, 0, 0.692);
+    }
+
+
+    .para{
+      font-size: 18px;
+      padding: 10px 0px;
+      line-height: 30px;
+      color: rgba(0, 0, 0, 0.479);
+    } 
+      .big-para{
+      padding: 20px 10px;
+    }
+
+    .content{
+      width: 100%;
+      padding: 20px;
+    }
+
+    .top{
+       margin-bottom: 50px;
+       text-align: center;
+    }
+
+    .top .logo{
+      width: 50px;
+      margin-bottom: 20px;
+    }
+
+    button{
+      width: 100%;
+      font-size: 20px;
+      padding: 20px;
+      border-radius: 40px;
+
+    }
+
+    .btn .btn-1{
+     margin-bottom: 10px;
+    }
+
+    .text{
+      text-align: center;
+      /* margin-bottom: 100px; */
+    
+    }
+
+    .tv{
+     
+      flex-direction: column;
+      
+      
+    }
+
+    .tv img{
+      width: 100%;
+    }
+
+    .tv-info{
+       width: 100%;
+       flex-direction: column;
+       text-align: center;
+    }
+
+    .mobile img{
+      width: 100%;
+    }
+
+    .feature{
+      flex-direction: column;
+      
+    }
+
+    .feature .item{
+      width: 100%;
+       
+    }
+
+    .sm-para{
+      /* border: 1px solid black; */
+      padding: 10px 25px;
+    }
+
+    .company-logo{
+      
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+
+    .company-logo .image{
+      margin-bottom: 50px;
+    }
+
+  
+    }
+  </style>
+</head>
+<body>
+
+  <!-- container start -->
+  <div class="container">
+    <!-- content start -->
+    <div class="content">
+      <!-- top start -->
+      <div class="top">
+      <img src="images/logo.svg" class="logo">
+      <h1 class="main-heading"> A history of everything you copy</h1>
+      <p class="para big-para">
+        Clipboard allows you to track and organize everything you 
+        copy. Instantly access your clipboard on all your devices.</p>
+        <div class="btn">
+          <button class="btn-1"> Download for iOS</button>
+          <button class="btn-2">Download for Mac</button>
+        </div>
+    </div>
+      <!-- top end -->
+
+      <!-- text start -->
+    <div class="text">
+      <h2 class="heading">Keep track of your snippets</h2>
+      <p class="para big-para"> Clipboard instantly stores any item you copy in the cloud, 
+        meaning you can access your snippets immediately on all your 
+        devices. Our Mac and iOS apps will help you organize everything.</p>
+    </div>
+      <!-- text end -->
+
+      <!-- tv start  -->
+    <div class="tv">
+      <img src="images/image-computer.png" alt="">
+      <div class="tv-info">
+        <div class="tv-item">
+        <h2 class="sub-heading"> Quick Search</h2>
+        <p class="para">Easily search your snippets by content, category, web address, application, and more.</p>
+      </div>
+      <div class="tv-item">
+        <h2 class="sub-heading"> iCloud Sync</h2>
+        <p class="para">Instantly saves and syncs snippets across all your devices.</p>
+      </div>
+      <div class="tv-item">
+        <h2 class="sub-heading">Complete History</h2>
+        <p class="para"> Retrieve any snippets from the first moment you started using the app.</p>
+      </div>
+      </div>
+    </div>
+      <!-- tv end  -->
+
+      <!-- text start -->
+    <div class="text">
+      <h2 class="heading">Access Clipboard anywhere</h2>
+      <p class="para big-para">  Whether you’re on the go, or at your computer, you can access all your Clipboard 
+        snippets in a few simple clicks.</p>
+    </div>
+      <!-- text end -->
+       
+      <!-- mobile start -->
+    <div class="mobile">
+      <img src="images/image-devices.png" alt="">
+    </div>
+      <!-- mobile end -->
+
+      <!-- text start -->
+    <div class="text">
+      <h2 class="heading">Supercharge your workflow</h2>
+      <p class="para big-para">We’ve got the tools to boost your productivity.</p>
+    </div>
+      <!-- text start -->
+
+      <!-- feature start -->
+    <div class="feature">
+      <div class="item">
+        <img src="images/icon-blacklist.svg" alt="">
+        <h3 class="sub-heading">Create blacklists</h3>
+        <p class="para sm-para">Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+      </div>
+
+      <div class="item">
+        <img src="images/icon-text.svg" alt="">
+        <h3 class="sub-heading">Plain text snippets</h3>
+        <p class="para sm-para">Remove unwanted formatting from copied text for a consistent look.</p>
+      </div>
+
+      <div class="item">
+        <img src="images/icon-preview.svg" alt="">
+        <h3 class="sub-heading">Sneak preview</h3>
+        <p class="para sm-para">Quick preview of all snippets on your Clipboard for easy access.</p>
+      </div>
+
+    </div>
+      <!-- feature start -->
+
+      <!-- company logo start -->
+    <div class="company-logo">
+      <div class="image">
+        <img src="images/logo-google.png" alt="">
+      </div>
+
+      <div class="image">
+        <img src="images/logo-ibm.png" alt="">
+      </div>
+
+      <div class="image">
+        <img src="images/logo-microsoft.png" alt="">
+      </div>
+
+      <div class="image">
+        <img src="images/logo-hp.png" alt="">
+      </div>
+
+      <div class="image">
+        <img src="images/logo-vector-graphics.png" alt="">
+      </div>
+
+    </div>
+      <!-- company logo end -->
+
+      <!-- bottom start -->
+    <div class="bottom">
+      <h2 class="heading"> Clipboard for iOS and Mac OS</h2>
+      <p class="para big-para">
+        Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+  and you’re ready to start adding to your clipboard.</p>
+        <div class="btn">
+          <button class="btn-1"> Download for iOS</button>
+          <button class="btn-2">Download for Mac</button>
+        </div>
+
+    </div>
+      <!-- bottom end -->
+    </div>
+     <!-- content end -->
+  </div>
+  <!-- container end -->
+
+</body>
+</html>

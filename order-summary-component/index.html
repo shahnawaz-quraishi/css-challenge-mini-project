@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <title>Order summary card</title>
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url(images/pattern-background-desktop.svg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-color: rgba(127, 219, 255, 0.377); 
+    }
+    .content{
+      width: 400px;
+      background-color: white;
+      border-radius: 30px;
+    }
+    .image{
+      width: 100%;
+      height: 30vh;
+      background-image: url(images/illustration-hero.svg);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px; 
+    }
+    .detail{
+      width: 100%;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 40px;
+      text-align: center;
+    }
+    h2{
+      color: rgba(4, 4, 58, 0.945);
+      font-weight: bold;
+    }
+    .para{
+      color: rgba(0, 0, 0, 0.644);
+    }
+    .number-detail{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       padding: 10px 20px;
+       background-color: rgba(128, 128, 128, 0.233);
+       border-radius: 10px;   
+    }
+
+   .number-detail .number{
+       margin-right: 60px;
+    }
+    .plane{
+      color: rgba(4, 4, 58, 0.945);
+      font-weight: bold;
+    }
+    .plane-price{
+      color: rgba(0, 0, 0, 0.658);
+    }
+    .change{
+      color: blue;
+      display: flex;
+      justify-content: end;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .change:hover{
+      text-decoration: none;
+    }
+    button{
+      padding: 15px;
+      background-color: rgb(34, 34, 223);
+      border: none;
+      font-size: 16px;
+      border-radius: 15px;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover{
+      background-color: rgb(108, 108, 221);
+    }
+    .cancel{
+      color: rgb(20, 20, 155);
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .cancel:hover{
+      color: rgba(14, 14, 139, 0.801);
+    }
+    @media(max-width:430px){
+      .container{
+        width: 100%;
+        height: 100vh;
+        padding: 20px; 
+      }
+      .content{
+        width: 100%; 
+        height: auto;
+      }
+      .image{
+        height: 200px;
+      }
+      .detail{
+        padding: 20px;
+        height: auto;
+      }
+    }
+
+    @media(max-width:1024p){
+
+      .container{
+        height: auto;
+        /* padding: 40px; */
+      }
+      .content{
+        width: 100%;
+        font-size: 25px;
+      }
+      .image{
+       height: 35vh;
+      }
+      .detail{
+       height: 55vh;
+       gap: 40px;
+      }
+    }
+
+    @media(max-width:320px){
+      .container{
+        height: auto;
+      }
+    }
+
+
+ 
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="content">
+      <div class="image">
+         
+      </div>
+      <div class="detail">
+        <h2> Order Summary</h2>
+        <p class="para"> You can now listen to millions of songs, audiobooks, and podcasts on any 
+          device anywhere you like!</p>
+          <div class="number-detail">
+            <img src="images/icon-music.svg" alt="">
+            <div class="number">
+              <p class="plane">Annual Plan</p>
+              <p class="plane-price">$59.99/year</p>
+            </div>
+            <p class="change">Change</p>
+          </div>
+          <button>Proceed to Payment</button>
+          <p class="cancel">Cancel Order</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

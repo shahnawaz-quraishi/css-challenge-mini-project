@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->  
+  <title> Four card feature section</title>
+  <style>
+
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+    .container{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(229, 6%, 66%);
+      /* border: 1px solid black; */
+    }
+    .content{
+     padding:  0px 100px;  
+    }
+    .text{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; 
+    }
+    .text-info{
+      padding: 10px;
+      width: 33%;
+    }
+    .heading-1{
+      font-size: 28px;
+      color: rgba(0, 0, 0, 0.685);
+    }
+    .heading-2{
+      font-size: 30px;
+      font-weight: bolder;
+      margin: 10px 0;
+    }
+    .para{
+      color: rgba(0, 0, 0, 0.479);
+    }
+    .box{
+      /* display: grid;
+      grid-template-columns: repeat(4,1fr); */
+      display: flex;
+      gap: 20px;
+      place-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 100px 20px;
+      /* border: 1px solid black; */  
+    }
+    .item{
+      padding: 10px;
+      background-color: gainsboro; 
+    }
+    h4{
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .item p{
+      color: rgba(0, 0, 0, 0.479); 
+     margin-top: 10px;
+     margin-bottom: 30px;
+    }
+    .image{
+      text-align: end;
+    }
+    img{
+      width: 30px;
+    }
+    .item1{
+      border-top: 2px solid hsl(180, 62%, 55%);
+      width: 265px;
+    }
+    .item2{
+      border-top: 2px solid hsl(0, 78%, 62%);
+      position: relative;
+      top: -85px;
+      width: 265px;
+    }
+    .item3{
+      border-top: 2px solid hsl(34, 97%, 64%);
+      position: absolute;
+      right: 305px;
+      bottom: 15px;
+      width: 265px;
+    }
+    .item4{
+      border-top: 2px solid hsl(212, 86%, 64%);
+      width: 265px; 
+    }
+
+    @media(max-width:430px){
+      .container{
+        width: 100%;
+        height: auto;
+      }
+      .content{
+        padding:  20px 5px;  
+    }
+    .heading-1{
+      font-size: 24px;
+      color: rgba(0, 0, 0, 0.685);
+    }
+    .heading-2{
+      font-size: 25px;
+      font-weight: bolder;
+      margin: 10px 0;
+    }
+    .text{
+      width: 100%;
+    }
+    .text-info{
+      width: 100%;
+    }
+    .box{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      gap: 20px;
+      position: none;
+      padding: 40px 15px;   
+    }
+    .item{
+      padding:  20px;
+    }
+    .item1{
+      width: 100%;
+    }
+    .item4{
+      width: 100%;
+    }
+    .item2{
+      border-top: 2px solid hsl(0, 78%, 62%);
+      position: relative;
+      top: 0;
+      width: 100%;
+    }
+    .item3{
+      border-top: 2px solid hsl(34, 97%, 64%);
+      position: relative;
+      right: 0;
+      bottom: 0;
+      width: 100%;   
+    }
+    img{
+      width: 50px;
+    }
+    
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- container start -->
+  <div class="container">
+    <!-- content start -->
+    <div class="content">
+      <!-- text start -->
+      <div class="text">
+        <div class="text-info">
+        <p class="heading-1">Reliable, efficient delivery</p>
+        <h2 class="heading-2"> Powered by Technology</h2>
+        <p class="para">
+          Our Artificial Intelligence powered tools use millions of project data points 
+          to ensure that your project is successful</p>
+      </div>
+    </div>
+    <!-- text end -->
+
+    <!-- box start -->
+      <div class="box">
+        <!-- box item start -->
+        <div class="item item1">
+          <h4>Supervisor</h4>
+          <p>  Monitors activity to identify project roadblocks</p>
+          <div class="image">
+            <img src="images/icon-supervisor.svg" alt="">
+          </div>
+        </div>
+        <div class="item item2">
+          <h4>Team Builder</h4>
+          <p>  Scans our talent network to create the optimal team for your project</p>
+          <div class="image">
+            <img src="images/icon-team-builder.svg" alt="">
+          </div>
+        </div>
+        <div class="item item3">
+          <h4> Karma</h4>
+          <p>   Regularly evaluates our talent to ensure quality</p>
+          <div class="image">
+            <img src="images/icon-karma.svg" alt="">
+          </div>
+        </div>
+        <div class="item item4">
+          <h4> Calculator</h4>
+          <p>  Uses data from past projects to provide better delivery estimates</p>
+          <div class="image">
+            <img src="images/icon-calculator.svg" alt="">
+          </div>
+          <!-- box item end -->
+        </div>
+        <!-- box end -->
+      </div>
+      <!-- content end -->
+    </div>
+    <!-- container end -->
+  </div>
+</body>
+</html>

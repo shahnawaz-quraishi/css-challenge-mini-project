@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title> Fylo landing page with two column layout</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      text-decoration: none;
+    }
+    body{
+      font-size: 16px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-color: hsl(240, 75%, 98%);  
+    }
+    .para{
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.411);
+      margin-bottom: 10px;
+      word-spacing: 5px;
+    }
+    .heading{
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: 800;
+      /* padding-inline: 50px; */
+    }
+    button{
+      padding: 10px;
+      background-color: hsl(224, 93%, 58%);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover{
+      filter: brightness(150%);
+    }
+    .container{
+      padding:  50px 100px; 
+    }
+    header{
+      width: 100%;
+      height: auto;
+    }
+    header .container{
+      padding: 20px 50px;
+    }
+    .header-content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo{
+      display: flex;
+      align-items: center;
+    }
+    .logo img{
+       width: 100px; 
+    }
+    nav ul{
+      display: flex; 
+    }
+   nav ul li {
+    padding: 0 20px;
+   }
+   li a{
+    cursor: pointer;
+    position: relative;
+   }
+   li a:hover:before{
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: hsl(228, 45%, 44%);
+      top: 20px;
+      right:  0;
+   }
+   main{
+    width: 100%;
+    height: calc(100vh - 70px);
+   }
+   .main-content{ 
+    display: flex;
+    align-items: center;
+    gap: 50px;
+   }
+   .main-left{
+    width: 50%;
+   }
+   .main-left input{
+    width: 50%;
+    height: 40px;
+   }
+   input{
+    border: 1px solid hsl(238, 22%, 44%);
+    outline: none;
+    padding-left: 20px;
+   }
+   input:focus{
+    border: 1px solid hsl(224, 93%, 58%);
+   }
+   .main-left button{
+     width: 40%;
+     height: 40px;
+   }
+   .main-right{
+    width: 50%;
+   }
+   .main-right img{
+    width: 100%;
+   }
+   .info{
+    width: 100%;
+   }
+   .info-content{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+   }
+   .info-left{
+     width: 50%;
+   }
+   .info-right{
+    width: 50%;
+   }
+   .info-right img{
+    width: 100%;
+   }
+   .a-tag{
+    color: hsl(170, 45%, 43%);
+    display: inline-block;
+    margin-bottom: 5px;
+   }
+   hr{
+    width: 140px;
+    color: hsl(170, 45%, 43%); 
+   }
+   .profile{
+     width: 50%;
+     padding: 10px;
+     margin-top: 40px;
+     box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.411); 
+   }
+   .profile .para{
+    font-size: 13px;
+    word-spacing: 1px;
+   }
+   .profile .people{
+    width: 40px;
+    border-radius: 50%;
+   }
+   .profile-info{
+    display: flex;
+    gap: 5px;
+   }
+   .name{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+   }
+   .post{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.719);
+   }
+   .subscribe-content{
+    display: flex;
+    gap: 100px;
+   }
+   .subscribe-left{
+     width: 50%;
+   }
+   .subscribe-left .para{
+    color: white;
+   }
+   .subscribe-right{
+    width: 50%;   
+  }
+  .subscribe-right .input-field{
+    width: 100%;
+  }
+  .input-field input{
+    width: 100%;
+    height: 40px;
+  }
+  .subscribe-right .subscribe-btn{
+    width: 40%;
+    height: 40px;
+    margin-top: 10px;
+  }
+  .subscribe{
+    background-color: hsl(238, 22%, 44%);
+    color: white;
+  }
+  footer{
+    background-color: hsl(243, 87%, 12%);
+    color: white;
+  }
+  .footer-content{
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .logo{
+    fill: white;   
+  }
+  .phone{
+    display: flex;
+    gap: 20px; 
+  }
+  .email{
+    display: flex;
+    gap: 20px;
+  }
+  .link a{
+    color: white;
+    cursor: pointer;
+  }
+  .link a:hover{
+    color: hsl(224, 93%, 58%);
+  }
+  .footer-link{
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-image i{
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .footer-image i:hover{
+    color: hsl(224, 93%, 58%);
+  }
+  @media(max-width:430px){
+
+    body{
+      font-size: 14px;
+    }
+    .para{
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.664);
+      margin-bottom: 10px;
+      word-spacing: 3px;
+      line-height: 25px;
+    }
+    .heading{
+      font-size: 28px;
+    }
+    .container{
+      padding:  50px 30px;
+    }
+    header .container{
+      padding: 20px;
+    }
+   nav ul li {
+    padding: 0 10px;
+   }
+   main{
+    height: auto;
+   }
+   .main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+   }
+   .main-left{
+    order: 2;
+    width: 100%;
+   }
+   .main-left input{
+    width: 100%;
+    height: 40px;
+    margin: 20px 0;
+   }
+   .main-left button{
+     width: 100%;
+     height: 40px;
+   }
+   .main-right{
+    width: 100%;
+   }
+   .info{
+    width: 100%;
+   }
+   .info-content{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+   }
+   .info-left{
+     width: 100%;
+     order: 1;
+   }
+   .info-right{
+      width: 100%;  
+   }
+   .info-right img{
+    width: 100%;
+   }
+   .a-tag{
+    color: hsl(170, 45%, 43%);
+    display: inline-block;
+    margin-bottom: 5px;
+   }
+   hr{
+    width: 140px;
+    color: hsl(170, 45%, 43%);
+   }
+   .profile{
+     width: 100%;
+     padding: 20px;  
+   }
+   .subscribe-content{
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+    align-items: center;
+   }
+   .subscribe-left{
+        width: 100%;
+   }
+   .subscribe-left .para{
+    color: rgba(255, 255, 255, 0.76);
+   }
+   .subscribe-right{
+      width: 100%;   
+  }
+  .subscribe-right .subscribe-btn{
+    width: 100%;   
+  }
+  .footer-content{
+    display: flex;
+    gap: 50px;
+    flex-direction: column;   
+  }
+  .footer-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;   
+  }
+  .footer-item .logos{
+    width: 200px;
+    margin-bottom: 30px;
+  }
+  .footer-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+  }
+  </style>
+</head>
+<body>
+
+   <!-- Header Start -->
+
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="images/logo.svg" alt="">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="">Features</a></li>
+            <li><a href="">Team</a></li>
+            <li><a href="">Sign In</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Header End -->
+
+  <!-- main start -->
+
+  <main>
+    <div class="container">
+      <div class="main-content">
+        <div class="main-left">
+            <h2 class="heading"> All your files in one secure location, accessible anywhere.</h2>
+            <p class="para">
+              Fylo stores your most important files in one secure location. 
+              Access them wherever you need, share and collaborate with friends, 
+              family, and co-workers.</p>
+              <input type="text" placeholder="Enter your email">
+              <button> Get Started</button>
+        </div>
+        <div class="main-right">
+          <img src="images/illustration-1.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- main end -->
+
+  <!-- info section start -->
+
+  <section class="info">
+    <div class="container">
+      <div class="info-content">
+        <div class="info-left">
+           <h2 class="heading">Stay productive, wherever you are</h2>
+           <p class="para">Never let location be an issue when accessing your files. Fylo has you 
+            covered for all of your file storage needs.</p>
+            <p class="para">  Securely share files and folders with friends, family and colleagues for 
+              live collaboration. No email attachments required!</p>
+              <a href="#" class="a-tag">See how Fylo works</a>
+              <hr>
+              <div class="profile">
+                <img src="images/icon-quotes.svg" class="quotes">
+                <p class="para">  Fylo has improved our team productivity by an order of magnitude. Since 
+                  making the switch our team has become a well-oiled collaboration machine.</p>
+                  <div class="profile-info">
+                    <img src="images/avatar-testimonial.jpg" class="people">
+                    <div class="name-info">
+                    <h4 class="name">Kyle Burton</h4>
+                    <p class="post">Founder & CEO, Huddle</p>
+                  </div>
+                  </div>
+              </div>
+        </div>
+        <div class="info-right">
+           <img src="images/illustration-2.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- info section end -->
+
+  <!-- subscribe start -->
+
+  <section class="subscribe">
+    <div class="container">
+      <div class="subscribe-content">
+        <div class="subscribe-left">
+            <h2 class="heading">Get early access today</h2>
+            <p class="para"> It only takes a minute to sign up and our free starter tier is extremely generous. 
+              If you have any questions, our support team would be happy to help you.</p>
+        </div>
+
+        <div class="subscribe-right">
+            <div class="input-field">
+              <input type="text" placeholder="email@example.com">
+            </div>
+            <button class="subscribe-btn">Get Started For Free</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- subscribe end -->
+
+
+  <!-- footer start -->
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-item">
+          <!-- <img src="images/logo.svg" class="logos"> -->
+          <div class="logo-image">
+           <svg width="166" height="49" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path  id="a" d="M.014.03h93.96v48.29H.015z"/></defs><g fill="none" fill-rule="evenodd"><path d="M0 14.13v.123l27.95 13.13L56 14.209v-.033L27.95 1 0 14.13zm10.077.062L27.95 5.795l17.877 8.397-17.877 8.396-17.874-8.396zM27.95 32.483L0 19.55v4.784l27.95 12.964L56 24.289v-4.784L27.95 32.483zm0 9.703L0 29.25v4.783L27.95 47 56 33.99v-4.784l-28.05 12.98z" fill="#BDBAFA"/><g transform="translate(72)"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path class="logo" d="M87.56 24.152a8.1 8.1 0 0 0-2.161-5.573 7.259 7.259 0 0 0-2.34-1.673 6.864 6.864 0 0 0-2.85-.601c-1.01 0-1.961.2-2.852.601a7.257 7.257 0 0 0-2.34 1.673 8.102 8.102 0 0 0-2.16 5.574 8.102 8.102 0 0 0 2.16 5.573 7.257 7.257 0 0 0 2.34 1.672 6.864 6.864 0 0 0 2.851.602c1.01 0 1.96-.2 2.852-.602a7.259 7.259 0 0 0 2.339-1.672 8.1 8.1 0 0 0 2.16-5.574zm6.415 0c0 1.932-.357 3.723-1.07 5.373a13.098 13.098 0 0 1-2.94 4.28c-1.247 1.205-2.71 2.156-4.388 2.854-1.678.699-3.468 1.048-5.369 1.048-1.9 0-3.683-.349-5.346-1.048a13.863 13.863 0 0 1-4.366-2.876 13.351 13.351 0 0 1-2.94-4.302c-.713-1.65-1.07-3.426-1.07-5.329 0-1.873.364-3.634 1.092-5.284a13.92 13.92 0 0 1 2.962-4.325 13.671 13.671 0 0 1 4.367-2.898 13.552 13.552 0 0 1 5.301-1.048c1.901 0 3.69.35 5.369 1.048 1.678.698 3.14 1.65 4.388 2.854 1.248 1.204 2.228 2.638 2.94 4.302.713 1.665 1.07 3.449 1.07 5.351zM64.258 36.905a8.6 8.6 0 0 1-1.715.58c-.638.148-1.3.222-1.982.222a9.84 9.84 0 0 1-2.74-.379 6.003 6.003 0 0 1-2.295-1.226c-.653-.565-1.173-1.3-1.56-2.207-.385-.907-.578-2-.578-3.277V.029h6.549v29.474c0 1.07.215 1.806.646 2.207.43.401.943.602 1.537.602.742 0 1.455-.223 2.138-.669v5.262zM50.492 11.22L38.908 41.854c-.861 2.289-1.99 3.939-3.386 4.95-1.396 1.01-3.06 1.515-4.99 1.515-.297 0-.623-.022-.98-.066a7.352 7.352 0 0 1-1.025-.201l-2.138-5.975a8.486 8.486 0 0 0 1.56.557c.534.134 1.039.201 1.514.201 1.01 0 1.93-.23 2.762-.691.832-.46 1.47-1.315 1.916-2.564l.891-2.586-9.935-25.773h6.995l5.925 16.588 5.57-16.588h6.905zM23.538 7.342H6.786v8.294h16.529v5.618H6.785v15.784H.015V1.412h23.524v5.93z" fill="#000" mask="url(#b)"/></g></g></svg>
+          </div>
+           <div class="phone">
+            <img src="images/icon-phone.svg" alt="">
+            <h5>Phone: +1-543-123-4567</h5>
+           </div>
+           <div class="email">
+            <img src="images/icon-email.svg" alt="">
+            <h5>example@fylo.com</h5>
+           </div>
+        </div>
+
+        <div class="footer-item">
+          <li class="link"> <a href="">About Us</a></li>
+          <li class="link"><a href="">Jobs</a></li>
+          <li class="link"><a href="">Press</a></li>
+          <li class="link"><a href="">Blog</a></li>
+        </div>
+
+        <div class="footer-item">
+          <li class="link"><a href="">Contact Us</a></li>
+          <li class="link"><a href="">Terms</a></li>
+          <li class="link"><a href="">Privacy</a></li>
+        </div>
+
+        <div class="footer-item footer-link">
+          <div class="footer-image">
+            <!-- <img src="images/icon-email.svg" alt=""> -->
+            <i class="bi bi-facebook"></i>
+          </div>
+
+          <div class="footer-image">
+            <!-- <img src="images/icon-phone.svg" alt=""> -->
+            <i class="bi bi-twitter-x"></i>
+          </div>
+
+          <div class="footer-image">
+            <!-- <img src="images/icon-email.svg" alt=""> -->
+            <i class="bi bi-instagram"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- footer end -->
+
+</body>
+</html>

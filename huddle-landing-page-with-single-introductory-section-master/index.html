@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <title> Huddle landing page with single introductory section</title>
+
+  <style>
+
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .container{
+      background-image: url(images/bg-desktop.svg);
+      background-size: 100% 100%;
+      background-color: hsl(257, 40%, 49%);
+    }
+    .content{
+      width: 100%;
+      height: 100vh;
+      padding: 20px;
+    }
+    .logo{
+      margin-bottom: 60px;  
+    }
+    .main{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 50px; 
+    }
+    .left{
+      width: 40%;
+    }
+    .left img{
+      width: 100%;
+    }
+    .right{
+     width: 40%;
+     display: flex;
+     flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+    }
+    .heading{
+      font-size: 40px;
+      font-weight: 800;
+      color: white;
+    }
+    .para{
+      font-size: 18px;
+      word-spacing: 5px;
+      line-height: 30px;
+      color: rgba(255, 255, 255, 0.452);
+    }
+    button{
+      width: 180px;
+      padding: 15px 10px;
+      border-radius: 20px;
+      font-size: 18px;
+      border: none;
+      color: blue;
+      cursor: pointer;
+    }
+    button:hover{
+      background-color: hsl(300, 69%, 71%);
+      color: white;
+    }
+    @media(max-width:430px){
+      .container{
+        background-size: cover;
+        padding: 10px; 
+      }
+      .content{
+        width: 100%;
+        height: auto;
+      }
+      .logo{
+      margin-bottom: 40px; 
+    }
+    .logo img{
+      width: 200px;
+    }
+    .main{
+      flex-direction: column;
+    }
+    .left{
+      width: 100%;
+    }
+    .right{
+      width: 100%;
+      align-items: center;
+    }
+    .heading{
+      font-size: 26px;
+      font-weight: 400;
+    }
+    .para{
+      font-size: 16px;
+      word-spacing: 3px;
+    }
+
+    }
+  </style>
+</head>
+<body>
+
+  <!-- container start -->
+  <div class="container">
+    <!-- content start -->
+    <div class="content">
+      <div class="logo">
+        <img src="images/logo.svg" alt="">
+      </div>
+      <!-- main start -->
+      <div class="main">
+        <!-- left start -->
+        <div class="left">
+           <img src="images/illustration-mockups.svg" alt="">
+        </div>
+        <!-- left end -->
+
+        <!-- right start -->
+        <div class="right">
+            <h1 class="heading"> Build The Community Your Fans Will Love</h1>
+            <p class="para">  Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+              Create connections with your users as you engage in genuine discussion. </p>
+              <button>Register</button>
+        </div>
+        <!-- right end -->
+      </div>
+      <!-- main end -->
+    </div>
+    <!-- content end -->
+  </div>
+  <!-- container end -->
+
+
+</body>
+</html>
